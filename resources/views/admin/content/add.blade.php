@@ -87,7 +87,7 @@
                                                     .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
                                                 </style>
                                                 <!--<script type="text/javascript" src="/public/vendor/neditor/third-party/jquery-1.10.2.min.js"></script>-->
-                                                <script type="text/javascript" src="https://cdn.staticfile.org/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+                                                <script type="text/javascript" src="https://cdn.staticfile.net/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
                                             @endif
                                             <div class="layui-inline">
                                                 <label class="layui-form-label">{{ $inlineField->form_name }}</label>
@@ -198,7 +198,7 @@
                                         .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
                                     </style>
                                     <!--<script type="text/javascript" src="/public/vendor/neditor/third-party/jquery-1.10.2.min.js"></script>-->
-                                    <script type="text/javascript" src="https://cdn.staticfile.org/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+                                    <script type="text/javascript" src="https://cdn.staticfile.net/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
                                 @endif
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">{{ $field->form_name }}</label>
@@ -330,8 +330,8 @@
                                         $jsoneditor_init = true
                                     @endphp
 
-                                    <link href="https://cdn.staticfile.org/jsoneditor/9.7.4/jsoneditor.min.css" rel="stylesheet" type="text/css">
-                                    <script type="text/javascript" charset="utf-8" src="https://cdn.staticfile.org/jsoneditor/9.7.4/jsoneditor.min.js"></script>
+                                    <link href="https://cdn.staticfile.net/jsoneditor/9.7.4/jsoneditor.min.css" rel="stylesheet" type="text/css">
+                                    <script type="text/javascript" charset="utf-8" src="https://cdn.staticfile.net/jsoneditor/9.7.4/jsoneditor.min.js"></script>
                                 @endif
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">{{ $field->form_name }}</label>
