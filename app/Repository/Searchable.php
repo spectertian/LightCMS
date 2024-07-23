@@ -57,6 +57,9 @@ trait Searchable
             } elseif (strtolower($type) === 'in') {
                 $query->whereIn($k, explode(',', $value));
             } else {
+                if ($type === 'like') {
+                    $value = str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $value);
+                }
                 $query->where($k, $type, $type === 'like' ? "%{$value}%" : $value);
             }
         }
