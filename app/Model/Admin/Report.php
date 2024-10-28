@@ -16,41 +16,9 @@ class Report extends Model
     protected $table = 'report';
 
     // 指定主键
-    protected $primaryKey = 'report_id';
+    protected $primaryKey = 'id';
 
-    // 主键不是自增的
-    public $incrementing = false;
 
-    // 主键类型
-    protected $keyType = 'string';
-
-    // 可批量赋值的属性
-    protected $fillable = [
-        'report_id',
-        'client_name',
-        'client_address',
-        'sample_name',
-        'model_spec',
-        'receive_date',
-        'test_date',
-        'report_date'
-    ];
-
-    // 日期字段
-    protected $dates = [
-        'receive_date',
-        'test_date',
-        'report_date',
-        'created_at',
-        'updated_at'
-    ];
-
-    // 属性类型转换
-    protected $casts = [
-        'receive_date' => 'date',
-        'test_date' => 'date',
-        'report_date' => 'date'
-    ];
 
     public static $searchField = [
         'report_id' => '报告编号',
@@ -61,6 +29,9 @@ class Report extends Model
         'report_id' => '报告编号',
         'client_name' => '委托方',
         'sample_name' => '样品名称',
+        'url' => "二维码地址",
+//        'create_time' => '添加时间',
+//        'update_time' => '更新时间',
     ];
 
     // 创建时间和更新时间字段名

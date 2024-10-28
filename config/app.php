@@ -232,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class
         //'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 

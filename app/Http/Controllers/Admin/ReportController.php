@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+
 class ReportController extends Controller
 {
     protected $formNames = ['report_id', 'client_name', 'client_address', 'sample_name', 'model_spec','receive_date','test_date','report_date'];

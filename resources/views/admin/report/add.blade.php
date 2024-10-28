@@ -43,23 +43,22 @@
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">接收日期</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="receive_date" required class="layui-input" id="ID-laydate-demo" placeholder="yyyy-MM-dd"  value="{{ $model->receive_date ?? ''  }}">
+                        <div class="layui-input-inline">
+                            <input type="text" name="receive_date" class="layui-input" id="receive_date" value="{{ $model->receive_date ?? ''  }}">
                         </div>
                     </div>
 
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">检测日期</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="test_date" required class="layui-input" id="ID-laydate-demo" placeholder="yyyy-MM-dd"  value="{{ $model->test_date ?? ''  }}">
-
-                        </div>
-                    </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">报告日期</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="report_date" required class="layui-input" id="ID-laydate-demo" placeholder="yyyy-MM-dd"  value="{{ $model->report_date ?? ''  }}">
+                        <div class="layui-input-inline">
+                            <input type="text" name="test_date" class="layui-input" id="test_date" value="{{ $model->test_date ?? ''  }}">
+                        </div>
+                    </div>
 
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">报告日期</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="report_date" class="layui-input" id="report_date" value="{{ $model->report_date ?? ''  }}">
                         </div>
                     </div>
 
@@ -106,16 +105,17 @@
         });
     </script>
 
-    <script src="//unpkg.com/layui@2.9.18/dist/layui.js"></script>
+{{--    <script src="//unpkg.com/layui@2.9.18/dist/layui.js"></script>--}}
     <script>
-        layui.use(function(){
-            var laydate = layui.laydate;
-            // 渲染
-            laydate.render({
-                elem: '#ID-laydate-demo'
-            });
-
-
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#report_date',
+        });
+        laydate.render({
+            elem: '#test_date',
+        });
+        laydate.render({
+            elem: '#receive_date',
         });
     </script>
 @endsection
