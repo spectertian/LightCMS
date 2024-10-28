@@ -22,12 +22,11 @@
             </form>
         </div>
         <div class="layui-card-body">
-            {{QrCode::size(100)->generate(Request::url())}}
             <table class="layui-table" lay-data="{url:'{{ route('admin::report.list') }}?{{ request()->getQueryString() }}', page:true, limit:50, id:'test', toolbar:'<div><a href=\'{{ route('admin::report.create') }}\'><i class=\'layui-icon layui-icon-add-1\'></i>新增二维码</a></div>'}" lay-filter="test">
                 <thead>
                 <tr>
                     <th lay-data="{field:'id', width:80, sort: true}">ID</th>
-                    @include('admin.listHead2', ['data' => App\Model\Admin\Report::$listField])
+                    @include('admin.listHead', ['data' => App\Model\Admin\Report::$listField])
                     <th lay-data="{field:'create_time'}">添加时间</th>
                     <th lay-data="{field:'update_time'}">更新时间</th>
                     <th lay-data="{width:200, templet:'#action'}">操作</th>

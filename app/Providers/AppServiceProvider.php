@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 use Schema;
 
+use App\Model\Admin\Report;
+use App\Observers\ReportObserver;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -21,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
             $this->loadConfig();
         }
 
+        Report::observe(ReportObserver::class);
         /*
         if (\App::environment('dev')) {
             \DB::listen(function ($sql) {

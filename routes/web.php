@@ -12,6 +12,7 @@
 */
 
 use App\Foundation\Regexp;
+use App\Http\Controllers\QrcodeController;
 
 Route::group(
     [
@@ -31,5 +32,13 @@ Route::group(
         // 评论列表
         Route::get('/entity/{entityId}/content/{contentId}/comment', 'CommentController@list')
             ->name('comment.list')->where(['entityId' => Regexp::RESOURCE_ID, 'contentId' => Regexp::RESOURCE_ID]);
+
+        // 带名称的路由
+//        Route::get('/qrcode/{id}', [QrcodeController::class, 'show'])->name('qrcode.show');
+//        Route::get('/qrcode/image/{id}', [QrcodeController::class, 'image'])->name('qrcode.image');
+//        Route::resource('qrcode', QrcodeController::class);
+        // 带名称的路由
+        Route::get('/qrcode/{id}', [QrcodeController::class, 'show'])->name('qrcode.show');
+        Route::get('/qrcode/image/{id}', [QrcodeController::class, 'image'])->name('qrcode.image');
     }
 );

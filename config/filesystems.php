@@ -69,6 +69,12 @@ return [
             'url' => env('APP_URL') . '/upload/image',
             'visibility' => 'public',
         ],
+        'qrcode_img' => [
+            'driver' => 'local',
+            'root' => storage_path('app/qrcode'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
 
     ],
 
