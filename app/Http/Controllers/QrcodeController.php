@@ -36,6 +36,23 @@ class QrcodeController extends Controller
             abort(404);
         }
     }
+
+    public function downloadQrCode($id)
+    {
+        $report = Report::findOrFail($id);
+
+        $imageData = base64_decode($report->medium_data);
+
+
+        // 设置响应头
+        $headers = [
+            'Content-Type' => 'image/png',
+            'Content-Disposition' => 'attachment; filename="'.$report->id.'.png"',
+        ];
+
+        // 返回下载响应
+        return response($imageData)->withHeaders($headers);
+    }
 }
 
 // 路由

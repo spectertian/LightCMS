@@ -41,6 +41,8 @@ Route::group(
         // 带名称的路由
         Route::get('/qrcode/{id}', [QrcodeController::class, 'show'])->name('qrcode.show');
         Route::get('/qrcode/image/{id}', [QrcodeController::class, 'image'])->name('qrcode.image');
+        Route::get('qrcode/download/{id}', [QrcodeController::class, 'downloadQrCode'])->name('qrcode.download');
+
 
         Route::get('/check/{id}', [CheckController::class, 'show'])->name('check.show');
 

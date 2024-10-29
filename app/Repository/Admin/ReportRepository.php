@@ -25,7 +25,10 @@ class ReportRepository
         $data->transform(function ($item) {
             $item->editUrl = route('admin::report.edit', ['id' => $item->id]);
             $item->deleteUrl = route('admin::report.delete', ['id' => $item->id]);
-            $item->qrcode_url = '<img src="/qrcode/image/'.$item->id.'">';
+            $item->downloadUrl = route('web::qrcode.download', ['id' => $item->id]);
+            $item->qrcode_url = '<img src="'.route('web::qrcode.image', ['id' => $item->id]).'">';
+            $item->qrcode_href = route('web::qrcode.image', ['id' => $item->id]);
+
             return $item;
         });
 

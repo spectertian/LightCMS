@@ -44,6 +44,8 @@
     </div>
 @endsection
 <script type="text/html" id="action">
+    <a href="<% d.downloadUrl %>" class="layui-table-link" title="下载"><i class="layui-icon layui-icon-layim-download"></i></a>
+    <a href="<% d.qrcode_href %>" class="layui-table-link"  target="_blank" title="查看"><i class="layui-icon layui-icon-picture-fine"></i></a>
     <a href="<% d.editUrl %>" class="layui-table-link" title="编辑"><i class="layui-icon layui-icon-edit"></i></a>
     <a href="javascript:;" class="layui-table-link" title="删除" style="margin-left: 10px" onclick="deleteMenu('<% d.deleteUrl %>')"><i class="layui-icon layui-icon-delete"></i></a>
 </script>

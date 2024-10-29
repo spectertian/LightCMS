@@ -17,10 +17,11 @@ class ReportObserver
     {
         //
         Log::info('从模型中获取用户[' . $report->id . ']:' . $report->report_id);
+        $url = route('web::check.show', ['id' => $report->id]);
         // 基本生成并保存
         $qrcode = QrCode::format('png')
             ->size(200)
-            ->generate('https://www.baidu.com');
+            ->generate($url);
 
         // 保存到storage目录
         Storage::disk("qrcode_img")->put($report->id.'.jpg', $qrcode);
