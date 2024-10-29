@@ -16,7 +16,7 @@
 <!-- 导航栏 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/">检测报告系统</a>
+        <a class="navbar-brand" href="/">报告系统</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,7 +38,7 @@
 <!-- 页脚 -->
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container text-center">
-        <span class="text-muted">© {{ date('Y') }} 检测报告系统</span>
+        <span class="text-muted">© {{ date('Y') }} 报告系统</span>
     </div>
 </footer>
 

@@ -10,7 +10,7 @@
 {{--                    <img src="{{ asset('images/logo.png') }}" alt="公司logo">--}}
                 </div>
                 <div class="company-info">
-                    <h2>检测报告</h2>
+                    <h2>报告</h2>
 {{--                    <p>XXX检测中心</p>--}}
                 </div>
             </div>
@@ -51,21 +51,21 @@
             </div>
 
             <!-- 报告底部 -->
-            <div class="report-footer">
-                <div class="signatures">
-                    <div class="signature-item">
-                        <p>检测人：______________</p>
-                        <p>日期：________________</p>
-                    </div>
-                    <div class="signature-item">
-                        <p>审核人：______________</p>
-                        <p>日期：________________</p>
-                    </div>
-                </div>
-                <div class="stamp-area">
-                    <!-- 公章位置 -->
-                </div>
-            </div>
+{{--            <div class="report-footer">--}}
+{{--                <div class="signatures">--}}
+{{--                    <div class="signature-item">--}}
+{{--                        <p>检测人：______________</p>--}}
+{{--                        <p>日期：________________</p>--}}
+{{--                    </div>--}}
+{{--                    <div class="signature-item">--}}
+{{--                        <p>审核人：______________</p>--}}
+{{--                        <p>日期：________________</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="stamp-area">--}}
+{{--                    <!-- 公章位置 -->--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 @endsection
