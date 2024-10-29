@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>内部错误 - {{ config('app.name') }}</title>
-    <meta name="keywords" content="LightCMS">
-    <meta name="description" content="LightCMS">
+    <meta name="keywords" content="二维码">
+    <meta name="description" content="二维码">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

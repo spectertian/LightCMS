@@ -15,7 +15,7 @@
 
         <div class="pl-4">
             <a class="text-black text-base no-underline hover:no-underline font-extrabold text-xl"  href="/">
-                LightCMS
+                二维码
             </a>
         </div>
 

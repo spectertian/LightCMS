@@ -25,8 +25,7 @@ class ReportRepository
         $data->transform(function ($item) {
             $item->editUrl = route('admin::report.edit', ['id' => $item->id]);
             $item->deleteUrl = route('admin::report.delete', ['id' => $item->id]);
-//            $item->url = '<img src="'.Storage::url($item->id.'png').'">';
-            $item->url = '<img src="/qrcode/image/'.$item->id.'">';
+            $item->qrcode_url = '<img src="/qrcode/image/'.$item->id.'">';
             return $item;
         });
 

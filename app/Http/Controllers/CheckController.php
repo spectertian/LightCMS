@@ -8,25 +8,8 @@ class CheckController extends Controller
 {
     public function show($id)
     {
-        $qrcode = Report::findOrFail($id);
-        return view('qrcode.show', compact('qrcode'));
-    }
-
-    public function image($id)
-    {
-        try {
-            $qrcode = Report::findOrFail($id);
-
-            // 如果是 base64 编码的数据需要先解码
-            $imageData = base64_decode($qrcode->medium_data);
-
-            return response($imageData)
-                ->header('Content-Type', 'image/png')
-                ->header('Cache-Control', 'public, max-age=31536000');
-
-        } catch (\Exception $e) {
-            abort(404);
-        }
+        $report = Report::findOrFail($id);
+        return view('check.show', compact('report'));
     }
 }
 

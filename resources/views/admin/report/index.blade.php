@@ -2,6 +2,12 @@
 
 @section('content')
     @include('admin.breadcrumb')
+    <style>
+        .layui-table-cell{
+            display:table-cell;
+            vertical-align: middle;
+        }
+    </style>
 
     <div class="layui-card">
         <div class="layui-form layui-card-header light-search" style="height: auto">
@@ -27,6 +33,7 @@
                 <tr>
                     <th lay-data="{field:'id', width:80, sort: true}">ID</th>
                     @include('admin.listHead', ['data' => App\Model\Admin\Report::$listField])
+                    <th lay-data="{field:'qrcode_url',height:100}">二维码地址</th>
                     <th lay-data="{field:'create_time'}">添加时间</th>
                     <th lay-data="{field:'update_time'}">更新时间</th>
                     <th lay-data="{width:200, templet:'#action'}">操作</th>

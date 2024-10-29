@@ -29,7 +29,7 @@ class Report extends Model
         'report_id' => '报告编号',
         'client_name' => '委托方',
         'sample_name' => '样品名称',
-        'url' => "二维码地址",
+//        'url' => "二维码地址",
 //        'create_time' => '添加时间',
 //        'update_time' => '更新时间',
     ];
